@@ -56,21 +56,19 @@ This architecture reflects real-world backend and full-stack software engineerin
 
 ## 📂 Project Structure
 
-```
-
 fullstack-notification-service/
 ├── app/
-│   ├── api/
-│   │   ├── health.py
-│   │   └── notifications.py
-│   ├── models/
-│   │   ├── health.py
-│   │   ├── notification.py
-│   │   └── notification_db.py
-│   ├── database.py
-│   └── main.py
+│ ├── api/
+│ │ ├── health.py
+│ │ └── notifications.py
+│ ├── models/
+│ │ ├── health.py
+│ │ ├── notification.py
+│ │ └── notification_db.py
+│ ├── database.py
+│ └── main.py
 ├── frontend/
-│   └── index.html
+│ └── index.html
 ├── README.md
 ├── .gitignore
 └── main.py
