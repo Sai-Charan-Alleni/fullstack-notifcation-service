@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Notification App</title>
+</head>
+<body>
+  <h2>Send Notification</h2>
+
+  <label>Email:</label><br />
+  <input type="email" id="email" /><br /><br />
+
+  <label>Message:</label><br />
+  <input type="text" id="message" /><br /><br />
+
+  <button onclick="sendNotification()">Send</button>
+
+  <h3>Response:</h3>
+  <pre id="response"></pre>
+
+  <hr />
+
+  <h2>All Notifications</h2>
+  <button onclick="getNotifications()">Load Notifications</button>
+
+  <pre id="list"></pre>
+
+  <script>
+    async function sendNotification() {
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+
+      const response = await fetch("http://127.0.0.1:8000/notifications", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          email: email,
+          message: message
+        })
+      });
+
+      const data = await response.json();
+      document.getElementById("response").textContent =
+        JSON.stringify(data, null, 2);
+    }
+
+    async function getNotifications() {
+      const response = await fetch("http://127.0.0.1:8000/notifications");
+      const data = await response.json();
+      document.getElementById("list").textContent =
+        JSON.stringify(data, null, 2);
+    }
+  </script>
+</body>
+</html>
