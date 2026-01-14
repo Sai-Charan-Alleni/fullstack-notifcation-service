@@ -1,14 +1,3 @@
-Below is the **FULL, UPDATED, FINAL `README.md`** with:
-
-* ✅ Formatting fixed (backticks corrected)
-* ✅ Small professional polish added
-* ✅ Repo name aligned
-* ✅ No extra explanations
-* ✅ Ready to copy–paste and push
-
-👉 **Copy EVERYTHING below exactly as it is** into `README.md`.
-
----
 
 ```md
 # Full-Stack Notification Service 🚀
